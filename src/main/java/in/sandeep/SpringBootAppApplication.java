@@ -11,7 +11,13 @@ import org.springframework.context.annotation.Bean;
 public class SpringBootAppApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootAppApplication.class, args);
+
+
+
+       ConfigurableApplicationContext context= SpringApplication.run(SpringBootAppApplication.class, args);
+
+        System.out.println(context.getClass().getName());
+
     }
         @Bean
         public PwdUtils getinstamce(){
